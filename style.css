@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+.label {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 종이띠 디자인 */
+.strip {
+    background-color: #ffeb3b; /* 노란색 배경 */
+    border: 2px dashed #ff9800;
+    padding: 15px 10px;
+    margin: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    overflow-x: auto; /* 내용이 길면 스크롤 가능 */
+    white-space: nowrap;
+    color: #222;
+    border-radius: 5px;
+}
+
+/* 문장 영역 */
+.sentence-box {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #004d40;
+    min-height: 40px; /* 최소 높이 설정 */
+    line-height: 1.5;
+}
+
+#answer-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#submit-button {
+    background-color: #28a745;
+    color: white;
+}
+
+#submit-button:hover {
+    background-color: #218838;
+}
+
+#next-button {
+    background-color: #007bff;
+    color: white;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
+
+/* 채점 피드백 */
+#feedback {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 30px;
+}
+.correct {
+    color: #28a745; /* 초록색 */
+}
+.incorrect {
+    color: #dc3545; /* 빨간색 */
+}
