@@ -116,3 +116,7 @@ function checkAnswer() {
         // 빈칸을 정답 단어로 채우기
         const completedSentence = currentQ.sentence.replace(/_+/g, `**${currentQ.word}**`);
         sentenceArea.innerHTML = completedSentence.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+// 여기에 새로운 문제를 추가할 수 있습니다.
+];
+        // 앱 시작
+window.onload = loadQuestion;
