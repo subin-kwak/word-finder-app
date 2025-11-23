@@ -116,7 +116,38 @@ function checkAnswer() {
         // 빈칸을 정답 단어로 채우기
         const completedSentence = currentQ.sentence.replace(/_+/g, `**${currentQ.word}**`);
         sentenceArea.innerHTML = completedSentence.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-// 여기에 새로운 문제를 추가할 수 있습니다.
-];
-        // 앱 시작
+
+        submitButton.style.display = 'none';
+        nextButton.style.display = 'block';
+        answerInput.disabled = true;
+
+    } else {
+        // 오답인 경우
+        feedback.className = 'incorrect';
+        feedback.textContent = '❌ 틀렸습니다. 다시 한번 종이띠에서 단어를 찾아보세요.';
+    }
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    loadQuestion();
+}
+
+
+// --- 이벤트 리스너 ---
+
+submitButton.addEventListener('click', checkAnswer);
+nextButton.addEventListener('click', nextQuestion);
+
+// 엔터키로 제출 기능 추가
+answerInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter' && submitButton.style.display !== 'none') {
+        checkAnswer();
+    } else if (e.key === 'Enter' && nextButton.style.display !== 'none') {
+        nextQuestion();
+    }
+});
+
+
+// 앱 시작
 window.onload = loadQuestion;
