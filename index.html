@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 찾기 영어 학습 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔍 영어 단어 찾기 게임</h1>
+        <div id="status-message"></div>
+        <div id="question-area">
+            
+            <p class="label">종이띠에서 숨겨진 단어를 찾으세요!</p>
+            <div id="paper-strip" class="strip"></div>
+            
+            <p class="label">단어를 찾아 빈칸을 채우세요.</p>
+            <div id="sentence-area" class="sentence-box"></div>
+            
+            <input type="text" id="answer-input" placeholder="정답 단어 입력">
+            <button id="submit-button">제출하기</button>
+            <button id="next-button" style="display:none;">다음 문제</button>
+
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
